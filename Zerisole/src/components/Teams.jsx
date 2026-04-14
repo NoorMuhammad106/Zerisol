@@ -34,10 +34,10 @@ const Teams = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative flex flex-col items-center justify-between text-center p-6 sm:p-8 rounded-2xl bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] hover:bg-primary transition-all duration-500 hover:-translate-y-2 border-b-[5px] border-b-primary min-h-[340px]"
+              className="group relative flex flex-col items-center text-center p-5 sm:p-6 rounded-2xl bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] hover:bg-primary transition-all duration-500 hover:-translate-y-2 border-b-[5px] border-b-primary overflow-hidden"
             >
-              {/* Circular Image Container */}
-              <div className="w-28 h-28 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-6 border-4 border-primary group-hover:bg-white group-hover:border-white transition-all duration-500 overflow-hidden shadow-lg shrink-0">
+              {/* Circular Image Container - Tightened Margins */}
+              <div className="w-24 h-24 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-4 border-4 border-primary group-hover:bg-white group-hover:border-white transition-all duration-500 overflow-hidden shadow-lg shrink-0">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -45,27 +45,27 @@ const Teams = () => {
                 />
               </div>
 
-              {/* Text Area */}
-              <div className="flex flex-col items-center mb-6">
-                <h3 className="text-lg font-extrabold text-[#0D1041] dark:text-white mb-1 group-hover:text-white transition-colors duration-300 whitespace-nowrap">
+              {/* Text Area - Tightened Margins */}
+              <div className="flex flex-col items-center mb-4">
+                <h3 className="text-lg font-extrabold text-[#0D1041] dark:text-white mb-0.5 group-hover:text-white transition-colors duration-300 whitespace-nowrap">
                   {member.name}
                 </h3>
-                <p className="text-[13px] font-bold text-gray-500 dark:text-gray-400 group-hover:text-white/90 transition-colors duration-300 leading-tight">
+                <p className="text-[12px] font-bold text-gray-500 dark:text-gray-400 group-hover:text-white/90 transition-colors duration-300 leading-tight">
                   {member.title}
                 </p>
               </div>
 
-              {/* Social Icons - Inverted on hover */}
-              <div className="flex gap-3 relative z-20">
+              {/* Social Icons - Compact Placement */}
+              <div className="flex gap-2 relative z-20">
                 {[assets.linkedin_icon, assets.twitter_icon, assets.whatsapp_icon].map((icon, i) => (
                   <div 
                     key={i} 
-                    className="w-8 h-8 rounded-full bg-slate-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 flex items-center justify-center cursor-pointer hover:scale-110 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"
+                    className="w-7 h-7 rounded-full bg-slate-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-800 flex items-center justify-center cursor-pointer hover:scale-110 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"
                   >
                     <img 
                       src={icon} 
                       alt="social" 
-                      className="w-3.5 h-3.5 opacity-60 dark:opacity-40 group-hover:opacity-100 group-hover:invert transition-all" 
+                      className="w-3 h-3 opacity-60 dark:opacity-40 group-hover:opacity-100 group-hover:invert transition-all" 
                     />
                   </div>
                 ))}
