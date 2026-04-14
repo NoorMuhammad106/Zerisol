@@ -61,6 +61,7 @@ const Services = () => {
   ]
 
   return (
+    <div id="solutions" className="scroll-mt-20">
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -79,6 +80,7 @@ const Services = () => {
         ))}
       </div>
     </motion.div>
+    </div>
   )
 }
 

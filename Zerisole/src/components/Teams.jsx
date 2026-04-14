@@ -21,7 +21,7 @@ const Teams = () => {
       <div className="text-center relative z-10">
         <Title
           title="Meet Our Experts"
-          desc="Blending world-class talent with AI innovation to deliver exceptional results."
+          desc="Meet our team of experts specialized in AI Automation, AI Agent Development, Web Development, SEO, Digital Marketing, WordPress, Shopify, No-Code Tools, Desktop Applications, Game Development, and Project Management — all under one roof."
         />
       </div>
 
@@ -55,17 +55,17 @@ const Teams = () => {
                 </p>
               </div>
 
-              {/* Social Icons - Compact Placement */}
-              <div className="flex gap-2 relative z-20">
+              {/* Social Icons - Optimized for touch interaction on mobile */}
+              <div className="flex gap-3 relative z-20">
                 {[assets.linkedin_icon, assets.twitter_icon, assets.whatsapp_icon].map((icon, i) => (
                   <div 
                     key={i} 
-                    className="w-7 h-7 rounded-full bg-slate-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-800 flex items-center justify-center cursor-pointer hover:scale-110 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"
+                    className="w-9 h-9 sm:w-7 sm:h-7 rounded-full bg-slate-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 flex items-center justify-center cursor-pointer hover:scale-110 group-hover:bg-white/20 group-hover:border-white/30 transition-all duration-300"
                   >
                     <img 
                       src={icon} 
                       alt="social" 
-                      className="w-3 h-3 opacity-60 dark:opacity-40 group-hover:opacity-100 group-hover:invert transition-all" 
+                      className="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert transition-all" 
                     />
                   </div>
                 ))}

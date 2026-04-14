@@ -36,7 +36,7 @@ const ContactUs = () => {
       whileInView="visible"
       viewport={{ once: true }}
       id="contact-us"
-      className="py-24 px-4 sm:px-12 lg:px-24 xl:px-40 bg-white dark:bg-gray-950 overflow-hidden scroll-mt-20"
+      className="py-16 px-4 sm:px-12 lg:px-24 xl:px-40 bg-white dark:bg-gray-950 overflow-hidden scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 max-w-3xl mx-auto px-4">
@@ -51,8 +51,8 @@ const ContactUs = () => {
           </p>
         </div>
 
-        {/* Top 4 Detail Blocks */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        {/* Top 4 Detail Blocks - Grid optimized for mobile readability */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-16 px-4">
           {/* Address */}
           <div className="flex flex-col items-center text-center">
             <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-white mb-4 shadow-lg shadow-primary/30">
@@ -96,12 +96,12 @@ const ContactUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex-1 p-8 sm:p-12 lg:p-16 flex flex-col justify-center relative z-10 bg-white dark:bg-transparent"
+            className="flex-1 px-8 sm:px-12 lg:px-16 py-10 sm:py-12 flex flex-col justify-center relative z-10 bg-white dark:bg-transparent"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-10 text-center sm:text-left">Get in Touch</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-6 text-center sm:text-left">Get in Touch</h2>
 
-            <form onSubmit={onSubmit} id="contact-form" className="space-y-8">
-              <div className="space-y-2">
+            <form onSubmit={onSubmit} id="contact-form" className="space-y-6">
+              <div className="space-y-1.5">
                 <label className="text-sm font-semibold text-primary block">Full Name</label>
                 <input
                   type="text"
@@ -165,25 +165,25 @@ const ContactUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex-1 h-full relative flex flex-col justify-between p-8 sm:p-12 overflow-hidden bg-slate-50/50 dark:bg-gray-900/30 border-l border-gray-100 dark:border-gray-800"
+            className="flex-1 h-full relative flex flex-col justify-between px-8 sm:px-12 py-10 sm:py-12 overflow-hidden bg-slate-50/50 dark:bg-gray-900/30 border-l border-gray-100 dark:border-gray-800"
           >
-            {/* Animated Background Orbs */}
+            {/* Animated Background Orbs - Reduced size for mobile balance */}
             <motion.div
               animate={{ x: [0, 30, 0], y: [0, -40, 0], scale: [1, 1.1, 1] }}
               transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"
+              className="absolute top-1/4 right-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-primary/20 rounded-full blur-[40px] sm:blur-[80px]"
             />
             <motion.div
               animate={{ x: [0, -30, 0], y: [0, 40, 0], scale: [1, 1.2, 1] }}
               transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-[#7C3AED]/20 rounded-full blur-[80px]"
+              className="absolute bottom-1/4 left-1/4 w-40 h-40 sm:w-72 sm:h-72 bg-[#7C3AED]/20 rounded-full blur-[40px] sm:blur-[80px]"
             />
 
             {/* Top Info Section */}
-            <div className="relative z-10 text-center mb-8 lg:mb-12">
-              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-3">Accelerate Your Growth</h3>
+            <div className="relative z-10 text-center mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-black dark:text-white mb-2">Accelerate Your Growth</h3>
               <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-sm mx-auto leading-relaxed">
-                Connect with our AI professionals to discover how automation solutions can scale your business and streamline workflows.
+                Connect with our AI professionals to discover how automation solutions can scale your business.
               </p>
             </div>
 
@@ -242,35 +242,25 @@ const ContactUs = () => {
             </div>
 
             {/* Bottom: Interesting Value Proposition Badges */}
-            <div className="relative z-10 w-full mt-8 lg:mt-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="relative z-10 w-full mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-center gap-4 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 group hover:border-primary/30 transition-colors">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-white text-sm">Lightning Fast</h4>
-                    <p className="text-xs text-gray-500 font-medium">Response under 24hrs</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-black dark:text-white text-xs sm:text-sm truncate">Lightning Fast</h4>
+                    <p className="text-[10px] sm:text-xs text-gray-500 font-medium whitespace-nowrap">Response under 24hrs</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 group hover:border-[#7C3AED]/30 transition-colors">
                   <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-[#7C3AED] shrink-0 group-hover:scale-110 transition-transform">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-white text-sm">Secure & Private</h4>
-                    <p className="text-xs text-gray-500 font-medium">100% Data Confidentiality</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 md:col-span-2 group hover:border-[#EC4899]/30 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-pink-50 dark:bg-pink-900/30 flex items-center justify-center text-[#EC4899] shrink-0 group-hover:scale-110 transition-transform">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-black dark:text-white text-sm">Top Tier Experts</h4>
-                    <p className="text-xs text-gray-500 font-medium">Dedicated AI specialists assigned directly to your project.</p>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-black dark:text-white text-xs sm:text-sm truncate">Secure & Private</h4>
+                    <p className="text-[10px] sm:text-xs text-gray-500 font-medium whitespace-nowrap">100% Confidentiality</p>
                   </div>
                 </div>
               </div>

@@ -159,7 +159,7 @@ const OurWork = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               key={index}
-              className="group relative flex-none w-[300px] sm:w-[350px] lg:w-[400px] aspect-[16/10] bg-slate-100 rounded-2xl overflow-hidden snap-start cursor-pointer border border-gray-100 dark:border-gray-800"
+              className="group relative flex-none w-[270px] xs:w-[300px] sm:w-[350px] lg:w-[400px] aspect-[16/10] bg-slate-100 rounded-2xl overflow-hidden snap-start cursor-pointer border border-gray-100 dark:border-gray-800"
             >
               <img
                 src={work.image}

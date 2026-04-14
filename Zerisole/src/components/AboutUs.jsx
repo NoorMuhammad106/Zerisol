@@ -28,10 +28,10 @@ const AboutUs = () => {
                             className="w-full aspect-[640/434] object-cover"
                         />
                     </div>
-                    {/* Floating stats card */}
-                    <div className="absolute -bottom-10 -right-6 lg:-right-10 z-20 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800">
-                        <p className="text-4xl font-bold text-primary mb-1">5+</p>
-                        <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">Years of Innovation</p>
+                    {/* Floating stats card - Positioned safely for mobile screens */}
+                    <div className="absolute -bottom-6 right-2 sm:-bottom-10 sm:-right-6 lg:-right-10 z-20 bg-white dark:bg-gray-900 p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 transition-all">
+                        <p className="text-2xl sm:text-4xl font-bold text-primary mb-1">5+</p>
+                        <p className="text-[10px] sm:text-sm font-medium text-gray-500 uppercase tracking-wider">Years of Innovation</p>
                     </div>
                 </motion.div>
 
@@ -74,67 +74,57 @@ const AboutUs = () => {
                 </motion.div>
             </div>
 
-            {/* High-End Stats Card Grid - Optimized for both Light & Dark themes */}
-            <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {/* Stat Card 1 */}
-                <motion.div 
-                   whileHover={{ y: -10 }}
-                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
-                >
-                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
-                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
-                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.13c-.31.16-.69.16-1 0L3.53 17.38c-.32-.17-.53-.5-.53-.88V9.26c0-.38.21-.71.53-.88l7.97-4.13c.31-.16.69-.16 1 0l7.97 4.13c.32.17.53.5.53.88v7.24zM6.76 16.47l5.24 2.71V13.8l-5.24-2.7v5.37z"/></svg>
+            {/* Compact Themed Stats Component - 5 Column Professional Layout */}
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-[90rem] mx-auto px-4">
+                {/* Stat Card 1 - Orange Theme */}
+                <div className="relative p-2 rounded-[1.8rem] border border-indigo-500/30 group">
+                    <div className="absolute -bottom-1 -left-1 w-14 h-14 border-b-6 border-l-6 border-indigo-500 rounded-bl-[1.8rem] z-0 transition-all duration-300 group-hover:scale-105"></div>
+                    <div className="relative z-10 bg-[#F9F9F9] dark:bg-gray-900 rounded-[1.6rem] py-5 px-3 flex flex-col items-center shadow-lg">
+                        <svg className="w-7 h-7 text-indigo-500 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.13c-.31.16-.69.16-1 0L3.53 17.38c-.32-.17-.53-.5-.53-.88V9.26c0-.38.21-.71.53-.88l7.97-4.13c.31-.16.69-.16 1 0l7.97 4.13c.32.17.53.5.53.88v7.24zM6.76 16.47l5.24 2.71V13.8l-5.24-2.7v5.37z" /></svg>
+                        <p className="text-3xl font-black text-[#333] dark:text-white mb-1">50+</p>
+                        <p className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.05em] text-center whitespace-nowrap">Projects Completed</p>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">50+</p>
-                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">Projects<br/>Completed</p>
-                    </div>
-                </motion.div>
+                </div>
 
-                {/* Stat Card 2 */}
-                <motion.div 
-                   whileHover={{ y: -10 }}
-                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
-                >
-                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
-                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
-                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v4h4v2h-6V8zm0 8h2v2h-2v-2z"/></svg>
+                {/* Stat Card 2 - Cyan Theme */}
+                <div className="relative p-2 rounded-[1.8rem] border border-blue-500/30 group">
+                    <div className="absolute -bottom-1 -left-1 w-14 h-14 border-b-6 border-l-6 border-blue-500 rounded-bl-[1.8rem] z-0 transition-all duration-300 group-hover:scale-105"></div>
+                    <div className="relative z-10 bg-[#F9F9F9] dark:bg-gray-900 rounded-[1.6rem] py-5 px-3 flex flex-col items-center shadow-lg">
+                        <svg className="w-7 h-7 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v4h4v2h-6V8zm0 8h2v2h-2v-2z" /></svg>
+                        <p className="text-3xl font-black text-[#333] dark:text-white mb-1">99%</p>
+                        <p className="text-[10px] font-black text-blue-500 uppercase tracking-[0.05em] text-center whitespace-nowrap">Client Satisfaction</p>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">99%</p>
-                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">Client<br/>Satisfaction</p>
-                    </div>
-                </motion.div>
+                </div>
 
-                {/* Stat Card 3 */}
-                <motion.div 
-                   whileHover={{ y: -10 }}
-                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
-                >
-                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-purple-500/5 rounded-full blur-2xl group-hover:bg-purple-500/10 transition-colors"></div>
-                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
-                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-7h2v5h-2z"/></svg>
+                {/* Stat Card 3 - Pink Theme */}
+                <div className="relative p-2 rounded-[1.8rem] border border-indigo-600/30 group">
+                    <div className="absolute -bottom-1 -left-1 w-14 h-14 border-b-6 border-l-6 border-indigo-600 rounded-bl-[1.8rem] z-0 transition-all duration-300 group-hover:scale-105"></div>
+                    <div className="relative z-10 bg-[#F9F9F9] dark:bg-gray-900 rounded-[1.6rem] py-5 px-3 flex flex-col items-center shadow-lg">
+                        <svg className="w-7 h-7 text-indigo-600 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-7h2v5h-2z" /></svg>
+                        <p className="text-3xl font-black text-[#333] dark:text-white mb-1">25+</p>
+                        <p className="text-[10px] font-black text-indigo-600 uppercase tracking-[0.05em] text-center whitespace-nowrap">Global Clients</p>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">25+</p>
-                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">Global<br/>Clients</p>
-                    </div>
-                </motion.div>
+                </div>
 
-                {/* Stat Card 4 */}
-                <motion.div 
-                   whileHover={{ y: -10 }}
-                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
-                >
-                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-teal-500/5 rounded-full blur-2xl group-hover:bg-teal-500/10 transition-colors"></div>
-                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
-                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                {/* Stat Card 4 - Purple Theme */}
+                <div className="relative p-2 rounded-[1.8rem] border border-blue-600/30 group">
+                    <div className="absolute -bottom-1 -left-1 w-14 h-14 border-b-6 border-l-6 border-blue-600 rounded-bl-[1.8rem] z-0 transition-all duration-300 group-hover:scale-105"></div>
+                    <div className="relative z-10 bg-[#F9F9F9] dark:bg-gray-900 rounded-[1.6rem] py-5 px-3 flex flex-col items-center shadow-lg">
+                        <svg className="w-7 h-7 text-blue-600 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>
+                        <p className="text-3xl font-black text-[#333] dark:text-white mb-1">10</p>
+                        <p className="text-[10px] font-black text-blue-600 uppercase tracking-[0.05em] text-center whitespace-nowrap">AI Experts</p>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">10</p>
-                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">AI<br/>Experts</p>
+                </div>
+
+                {/* Stat Card 5 - Green Theme (Experience) */}
+                <div className="relative p-2 rounded-[1.8rem] border border-indigo-500/30 group">
+                    <div className="absolute -bottom-1 -left-1 w-14 h-14 border-b-6 border-l-6 border-indigo-500 rounded-bl-[1.8rem] z-0 transition-all duration-300 group-hover:scale-105"></div>
+                    <div className="relative z-10 bg-[#F9F9F9] dark:bg-gray-900 rounded-[1.6rem] py-5 px-3 flex flex-col items-center shadow-lg">
+                        <svg className="w-7 h-7 text-indigo-500 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" /></svg>
+                        <p className="text-3xl font-black text-[#333] dark:text-white mb-1">5+</p>
+                        <p className="text-[10px] font-black text-indigo-500 uppercase tracking-[0.05em] text-center whitespace-nowrap">Years Experience</p>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

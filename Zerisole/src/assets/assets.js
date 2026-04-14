@@ -32,6 +32,9 @@ import menu_icon_dark from './menu_icon_dark.svg'
 import hero_mockup from './hero_mockup.png'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
+import noor_img from './Noor-Muhammd.png'
+import haroon_img from './Haroon-Sajid.png'
+import arbi_img from './Arbi-Amir.jpeg'
 
 
 export const company_logos = [
@@ -77,9 +80,9 @@ const assets = {
 export default assets
 
 export const teamData = [
-  { name: 'NOOR MUHAMMAD', title: 'Co-founder & CEO', image: 'https://avatars.githubusercontent.com/u/92626624?v=4' },
-  { name: 'HAROON SAJID', title: 'Co-Founder & CTO', image: 'https://avatars.githubusercontent.com/u/195456266?v=4' },
-  { name: 'LITAN MOLLA', title: 'Vice president', image: 'https://avatars.githubusercontent.com/u/185999515?v=4' },
+  { name: 'NOOR MUHAMMAD', title: 'Co-founder & CEO', image: noor_img },
+  { name: 'HAROON SAJID', title: 'Co-Founder & CTO', image: haroon_img },
+  { name: 'ARBI AMIR', title: 'Lead Business Developer', image: arbi_img },
   { name: 'Juiena Parvin', title: 'Marketing & sales', image: 'https://randomuser.me/api/portraits/women/24.jpg' },
   { name: 'Emily Parker', title: 'Content marketer', image: 'https://randomuser.me/api/portraits/women/11.jpg' },
   { name: 'Ryan Mitchell', title: 'Content writer', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
