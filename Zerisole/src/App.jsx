@@ -1,16 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import TrustedBy from './components/TrustedBy'
-import Services from './components/Services'
-import OurWork from './components/OurWork'
-import Teams from './components/Teams'
-import ContactUs from './components/ContactUs'
-import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
-import AboutUs from './components/AboutUs'
-import StatsSection from './components/StatsSection'
-import PartnersMarquee from './components/PartnersMarquee'
+import { Toaster } from 'react-hot-toast'
+import HomePage from './pages/HomePage'
+import ServicesPage from './pages/ServicesPage'
+import OurWorkPage from './pages/OurWorkPage'
+import ScrollToTop from './components/ScrollToTop'
 
 const getInitialTheme = () => {
   const saved = localStorage.getItem('theme')
@@ -29,58 +25,22 @@ const App = () => {
     localStorage.setItem('theme', theme)
   }, [theme])
 
-  const dotRef = useRef(null)
-  const outlineRef = useRef(null)
-
-  // Refs for custom cursor position tracking 
-  const mouse = useRef({ x: 0, y: 0 })
-  const position = useRef({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const handelMouseMove = (e) => {
-      mouse.current.x = e.clientX
-      mouse.current.y = e.clientY
-    }
-
-    document.addEventListener('mousemove', handelMouseMove)
-
-    const animate = () => {
-      position.current.x += (mouse.current.x - position.current.x) * 0.15
-      position.current.y += (mouse.current.y - position.current.y) * 0.15
-
-      if (dotRef.current && outlineRef.current) {
-        dotRef.current.style.transform = `translate3D(${mouse.current.x - 6}px, ${mouse.current.y - 6}px, 0)`
-        outlineRef.current.style.transform = `translate3D(${position.current.x - 20}px, ${position.current.y - 20}px, 0)`
-      }
-      requestAnimationFrame(animate)
-    }
-    animate()
-
-    return () => {
-      document.removeEventListener('mousemove', handelMouseMove)
-    }
-  }, [])
-
   return (
-    <div className="relative  bg-white dark:bg-gray-950 transition-colors">
-      <Toaster />
-      <Navbar theme={theme} setTheme={setTheme} />
-      <Hero />
-      <AboutUs />
-      <Services />
-      <StatsSection />
-      <PartnersMarquee />
-      <OurWork />
-      <Teams />
-      <ContactUs />
-      <Footer theme={theme} />
-
-      {/* Custom Cursor Ring */}
-      <div ref={outlineRef} className="fixed top-0 left-0 h-10 w-10 rounded-full border border-primary pointer-events-none z-[9999]">
+    <Router>
+      <ScrollToTop />
+      <div className="relative bg-white dark:bg-gray-950 transition-colors">
+        <Toaster />
+        <Navbar theme={theme} setTheme={setTheme} />
+        
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/our-work" element={<OurWorkPage />} />
+        </Routes>
+        
+        <Footer theme={theme} />
       </div>
-      {/* Custom Cursor Dot */}
-      <div ref={dotRef} className="fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-none z-[9999]"></div>
-    </div>
+    </Router>
   )
 }
 

@@ -1,57 +1,37 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-
 const ServicesCard = ({ service, index }) => {
-
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [visible, setVisible] = useState(false);
-
-  const divRef = useRef(null)
-
-  const handelMouseMove = (e) => {
-    const bounds = divRef.current.getBoundingClientRect();
-    setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top })
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="relative overflow-hidden w-full flex flex-col rounded-2xl border border-gray-100 dark:border-gray-800 
-       shadow-xl shadow-gray-200/50 dark:shadow-none bg-white dark:bg-gray-900/50 transition-all duration-300 hover:border-primary/50" onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)} ref={divRef} onMouseMove={handelMouseMove}>
-
-      <div className={`pointer-events-none blur-3xl rounded-full bg-gradient-to-r from-blue-500/20 via-indigo-500/20 to-purple-500/20 w-[300px] h-[300px] absolute z-0 transition-opacity duration-500 ${visible ? 'opacity-100' : 'opacity-0'} `} style={{ top: position.y - 150, left: position.x - 150 }} />
-
-      <div className="flex flex-col p-8 h-full z-10 relative">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-14 h-14 flex items-center justify-center bg-blue-500/10 dark:bg-blue-400/10 rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-            {typeof service.icon === 'string' ? (
-              <img src={service.icon} alt="" className="w-8 h-8 object-contain" />
-            ) : (
-              <service.icon className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-            )}
-          </div>
-          <h3 className="font-bold text-lg leading-tight text-black dark:text-white">{service.title}</h3>
+      className="group relative flex flex-col items-center text-center p-8 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-[0_15px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-none hover:bg-primary transition-all duration-500 hover:-translate-y-2 overflow-hidden z-10 border-b-[5px] border-b-primary"
+    >
+      <div className="relative z-10 flex flex-col items-center h-full">
+        {/* Compact Icon Container */}
+        <div className="w-16 h-16 mb-6 flex items-center justify-center bg-primary rounded-full shrink-0 transition-all duration-500 group-hover:bg-white shadow-md">
+          {typeof service.icon === 'string' ? (
+            <img 
+              src={service.icon} 
+              alt={service.title} 
+              className="w-8 h-8 object-contain transition-all duration-500 group-hover:brightness-0" 
+            />
+          ) : (
+            <service.icon className="w-7 h-7 text-white group-hover:text-primary transition-colors duration-500" />
+          )}
         </div>
 
-        <div className="flex flex-col flex-grow">
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+        {/* Content */}
+        <div className="flex flex-col items-center">
+          <h3 className="font-bold text-lg md:text-xl whitespace-nowrap leading-tight text-gray-900 dark:text-white mb-3 group-hover:text-white transition-colors duration-300">
+            {service.title}
+          </h3>
+          <p className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed group-hover:text-white/90 transition-colors duration-300 max-w-[240px]">
             {service.description}
           </p>
-
-          {service.subServices && (
-            <div className="mt-auto pt-6 border-t border-gray-100 dark:border-gray-800 space-y-4">
-              {service.subServices.map((sub, idx) => (
-                <div key={idx} className="group/sub">
-                  <h4 className="text-[10px] font-bold text-primary uppercase tracking-[0.1em] mb-1">{sub.title}</h4>
-                  <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed">{sub.description}</p>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </motion.div>

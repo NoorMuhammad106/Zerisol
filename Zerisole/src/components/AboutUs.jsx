@@ -7,7 +7,7 @@ const AboutUs = () => {
     return (
         <section id="about-us" className="py-24 px-4 sm:px-12 lg:px-24 xl:px-40 overflow-hidden bg-white dark:bg-gray-950 scroll-mt-20">
             <Title
-                title="About Zerisol"
+                title="About Us"
                 desc="We are a team of expert AI engineers dedicated to building intelligent, high-impact, production-ready solutions."
             />
 
@@ -74,24 +74,67 @@ const AboutUs = () => {
                 </motion.div>
             </div>
 
-            {/* Our Values / Stats Section */}
-            <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-gray-100 dark:border-gray-800">
-                <div className="text-center">
-                    <p className="text-4xl font-bold text-black dark:text-white mb-2">50+</p>
-                    <p className="text-sm text-black dark:text-white uppercase tracking-widest">Projects Completed</p>
-                </div>
-                <div className="text-center">
-                    <p className="text-4xl font-bold text-black dark:text-white mb-2">99%</p>
-                    <p className="text-sm text-black dark:text-white uppercase tracking-widest">Client Satisfaction</p>
-                </div>
-                <div className="text-center">
-                    <p className="text-4xl font-bold text-black dark:text-white mb-2">25+</p>
-                    <p className="text-sm text-black dark:text-white uppercase tracking-widest">Global Clients</p>
-                </div>
-                <div className="text-center">
-                    <p className="text-4xl font-bold text-black dark:text-white mb-2">10</p>
-                    <p className="text-sm text-black dark:text-white uppercase tracking-widest">AI Experts</p>
-                </div>
+            {/* High-End Stats Card Grid - Optimized for both Light & Dark themes */}
+            <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {/* Stat Card 1 */}
+                <motion.div 
+                   whileHover={{ y: -10 }}
+                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+                >
+                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
+                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.97 4.13c-.31.16-.69.16-1 0L3.53 17.38c-.32-.17-.53-.5-.53-.88V9.26c0-.38.21-.71.53-.88l7.97-4.13c.31-.16.69-.16 1 0l7.97 4.13c.32.17.53.5.53.88v7.24zM6.76 16.47l5.24 2.71V13.8l-5.24-2.7v5.37z"/></svg>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">50+</p>
+                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">Projects<br/>Completed</p>
+                    </div>
+                </motion.div>
+
+                {/* Stat Card 2 */}
+                <motion.div 
+                   whileHover={{ y: -10 }}
+                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+                >
+                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors"></div>
+                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
+                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v4h4v2h-6V8zm0 8h2v2h-2v-2z"/></svg>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">99%</p>
+                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">Client<br/>Satisfaction</p>
+                    </div>
+                </motion.div>
+
+                {/* Stat Card 3 */}
+                <motion.div 
+                   whileHover={{ y: -10 }}
+                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+                >
+                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-purple-500/5 rounded-full blur-2xl group-hover:bg-purple-500/10 transition-colors"></div>
+                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
+                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-7h2v5h-2z"/></svg>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">25+</p>
+                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">Global<br/>Clients</p>
+                    </div>
+                </motion.div>
+
+                {/* Stat Card 4 */}
+                <motion.div 
+                   whileHover={{ y: -10 }}
+                   className="relative flex flex-col items-center p-10 rounded-3xl bg-white dark:bg-[#0D1041] border border-gray-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.03)] dark:shadow-none hover:shadow-2xl transition-all duration-500 group overflow-hidden"
+                >
+                    <div className="absolute -right-6 -top-6 w-24 h-24 bg-teal-500/5 rounded-full blur-2xl group-hover:bg-teal-500/10 transition-colors"></div>
+                    <div className="w-16 h-16 bg-[#FACC15] rounded-full flex items-center justify-center mb-8 shadow-[0_8px_30px_rgba(250,204,21,0.2)] transition-transform duration-500 group-hover:scale-110">
+                        <svg className="w-8 h-8 text-[#0D1041]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <p className="text-5xl font-extrabold text-[#0D1041] dark:text-white mb-4 tracking-tight tabular-nums">10</p>
+                        <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-[0.2em] text-center">AI<br/>Experts</p>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

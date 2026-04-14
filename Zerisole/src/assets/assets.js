@@ -29,6 +29,7 @@ import logo_dark from './logo_symbol_advanced.png'
 import airbnb_logo from './airbnb_logo.svg'
 import google_logo from './google_logo.svg'
 import menu_icon_dark from './menu_icon_dark.svg'
+import hero_mockup from './hero_mockup.png'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
 
@@ -68,6 +69,7 @@ const assets = {
   whatsapp_icon,
   logo_dark,
   menu_icon_dark,
+  hero_mockup,
   sun_icon,
   moon_icon
 }

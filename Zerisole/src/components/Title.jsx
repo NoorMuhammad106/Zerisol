@@ -9,7 +9,7 @@ const Title = ({ title, desc }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className='text-3xl sm:text-5xl text-center mb-3 font-medium text-black dark:text-white'>{title}</motion.h1>
+        className='text-4xl sm:text-5xl text-center mb-3 font-extrabold uppercase text-gray-900 dark:text-white'>{title}</motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

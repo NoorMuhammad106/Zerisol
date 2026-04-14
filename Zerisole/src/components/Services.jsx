@@ -20,42 +20,42 @@ const Services = () => {
   const servicesData = [
     {
       title: 'AI Voice Agents',
-      description: 'Advanced voice AI solutions for customer support, inbound call handling, outbound sales, and automated voice-driven communication workflows.',
+      description: 'Advanced voice AI for customer support and automated call workflows.',
       icon: Mic
     },
     {
-      title: 'Advanced AI Chatbots & Intelligent Agents',
-      description: 'Sophisticated AI chatbots and autonomous agents capable of managing complex conversations, automating workflows, and scaling business operations.',
+      title: 'Intelligent Bots',
+      description: 'Sophisticated AI chatbots capable of managing complex business operations.',
       icon: Bot
     },
     {
-      title: 'Organizational AI Adoption Planning',
-      description: 'Comprehensive evaluation of business processes with a structured AI automation roadmap, guided by certified AI professionals to ensure smooth transformation.',
+      title: 'AI Adoption',
+      description: 'Structured roadmaps for business automation guided by AI professionals.',
       icon: Workflow
     },
     {
-      title: 'Custom Software Development',
-      description: 'End-to-end development of AI-powered applications. Proven delivery across drilling, logistics, and healthcare industries with measurable results.',
+      title: 'Custom Software',
+      description: 'End-to-end development of AI-powered applications for various industries.',
       icon: Code
     },
     {
-      title: 'AI & Machine Learning Services',
-      description: 'At Zerisol, we enable businesses to leverage AI and Machine Learning to drive innovation, automate processes, and unlock data-driven insights.',
+      title: 'AI Automations',
+      description: 'Streamline operations using intelligent agents and no-code tools.',
       icon: Cpu
     },
     {
-      title: 'Web Development Services',
-      description: 'Scalable, secure, and modern web solutions built to support business growth, performance, and user experience using latest technologies.',
+      title: 'Web Solutions',
+      description: 'Scalable, secure, and modern web applications built for business growth.',
       icon: Globe
     },
     {
-      title: 'Shopify Development Services',
-      description: 'Custom Shopify stores designed for high conversion, seamless integrations, and scalable e-commerce growth for modern brands.',
+      title: 'Shopify Stores',
+      description: 'Custom Shopify stores designed for high conversion and e-commerce growth.',
       icon: ShoppingBag
     },
     {
-      title: 'UI/UX & Product Design',
-      description: 'User-centric design solutions that combine aesthetics with functionality to create intuitive digital products and memorable experiences.',
+      title: 'UI/UX Design',
+      description: 'User-centric design solutions combining aesthetics with functionality.',
       icon: Palette
     }
   ]
@@ -67,7 +67,7 @@ const Services = () => {
       viewport={{ once: true }}
       transition={{ staggerChildren: 0.2 }}
 
-      id='services' className='relative  flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-black dark:text-white scroll-mt-20'>
+      id='services' className='relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-12 pb-24 text-black dark:text-white scroll-mt-20'>
       <img src={assets.bgImage2} alt="" className='absolute -top-110 -left-70 z-1 dark:hidden' />
 
       <div className="z-10">
