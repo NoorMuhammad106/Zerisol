@@ -34,13 +34,13 @@ const Services = () => {
       icon: Workflow
     },
     {
-      title: 'Custom Software',
-      description: 'End-to-end development of AI-powered applications for various industries.',
+      title: 'Python & AI Apps',
+      description: 'Scalable backend solutions with Django and FastAPI.',
       icon: Code
     },
     {
       title: 'AI Automations',
-      description: 'Streamline operations using intelligent agents and no-code tools.',
+      description: 'n8n, Make, and Zapier ecosystems to streamline operations.',
       icon: Cpu
     },
     {

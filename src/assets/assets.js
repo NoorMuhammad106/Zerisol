@@ -35,6 +35,7 @@ import moon_icon from './moon_icon.svg'
 import noor_img from './Noor-Muhammd.png'
 import haroon_img from './Haroon-Sajid.png'
 import arbi_img from './Arbi-Amir.jpeg'
+import adil_img from './Adil-Hayat.png'
 
 
 export const company_logos = [
@@ -83,7 +84,7 @@ export const teamData = [
   { name: 'NOOR MUHAMMAD', title: 'Co-founder & CEO', image: noor_img },
   { name: 'HAROON SAJID', title: 'Co-Founder & CTO', image: haroon_img },
   { name: 'ARBI AMIR', title: 'Lead Business Developer', image: arbi_img },
-  { name: 'Juiena Parvin', title: 'Marketing & sales', image: 'https://randomuser.me/api/portraits/women/24.jpg' },
+  { name: 'ADIL HAYAT', title: 'Senior AI Automation Engineer', image: adil_img },
   { name: 'Emily Parker', title: 'Content marketer', image: 'https://randomuser.me/api/portraits/women/11.jpg' },
   { name: 'Ryan Mitchell', title: 'Content writer', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
   { name: 'Megan Brooks', title: 'Performance manager', image: 'https://randomuser.me/api/portraits/women/12.jpg' },

@@ -13,8 +13,8 @@ const CATEGORIES = [
             <path d="M7 9l2 2 4-4" />
           </svg>
         ),
-        name: "AI Workflow Automation",
-        desc: "End-to-end automation of repetitive tasks",
+        name: "Omni-Channel Automation",
+        desc: "Zapier, HubSpot & CRM syncing",
       },
       {
         icon: (
@@ -50,8 +50,8 @@ const CATEGORIES = [
             <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
           </svg>
         ),
-        name: "n8n / Make.com Integrations",
-        desc: "Plug-and-play automation with 500+ apps",
+        name: "No-Code Ecosystems",
+        desc: "n8n, Make, Airtable & Syncfor flows",
       },
       {
         icon: (
@@ -64,10 +64,10 @@ const CATEGORIES = [
       },
     ],
     expertise: [
-      { icon: "🤖", name: "OpenAI GPT-4o" },
-      { icon: "🔗", name: "n8n Automation" },
-      { icon: "⚙️", name: "Make.com" },
-      { icon: "🧠", name: "LangChain" },
+      { icon: "🤖", name: "OpenAI / LangChain" },
+      { icon: "🔗", name: "n8n / Make / Zapier" },
+      { icon: "🎯", name: "HubSpot / Airtable" },
+      { icon: "📅", name: "Syncfor / Crew AI" },
     ],
   },
   {
@@ -216,8 +216,8 @@ const CATEGORIES = [
             <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
           </svg>
         ),
-        name: "Custom Web Development",
-        desc: "Tailored websites built to convert",
+        name: "Custom Programming",
+        desc: "Tailored Python & Backend solutions",
       },
       {
         icon: (
@@ -253,8 +253,8 @@ const CATEGORIES = [
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
         ),
-        name: "Web App Development",
-        desc: "React / Next.js apps at startup speed",
+        name: "Full-Stack Web Apps",
+        desc: "Python, Django & FastAPI solutions",
       },
       {
         icon: (
@@ -267,10 +267,10 @@ const CATEGORIES = [
       },
     ],
     expertise: [
-      { icon: "⚛️", name: "React / Next.js" },
-      { icon: "🎨", name: "Figma" },
-      { icon: "🟦", name: "WordPress" },
-      { icon: "🛒", name: "Shopify" },
+      { icon: "🐍", name: "Python / Django / FastAPI" },
+      { icon: "⚛️", name: "React / Next.js / TypeScript / Tailwind" },
+      { icon: "🎨", name: "Figma Design" },
+      { icon: "🟦", name: "WordPress / Shopify" },
     ],
   },
 ];
